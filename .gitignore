@@ -1,0 +1,17 @@
+# Executáveis do Windows
+*.exe
+*.o
+*.out
+
+# Arquivos de compilação
+*.obj
+*.pdb
+*.idb
+
+# Backup files
+*~
+*.bak
+
+# IDE files
+.vscode/
+.idea/
