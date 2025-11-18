@@ -18,8 +18,8 @@
 
 O projeto está dividido em 3 níveis de complexidade crescente:
 
-### 🎯 Nível 1 - Novato: Estrutura Básica
-**Arquivo**: `nivel_novato.c`
+### 🎯 Nível Novato: Estrutura Básica
+**Arquivo: war_game_novato.c**
 
 #### Funcionalidades Implementadas:
 - ✅ Estrutura `Territorio` com dados básicos
@@ -29,39 +29,43 @@ O projeto está dividido em 3 níveis de complexidade crescente:
 - ✅ Busca de territórios por ID
 - ✅ Passagem de parâmetros por valor e referência
 
-#### Conceitos Demonstrados:
-```c
-// Struct para representar territórios
-typedef struct {
-    int id;
-    char nome[50];
-    char cor[20];
-    int tropas;
-} Territorio;
+### ⚔️ Nível Aventureiro ✅ IMPLEMENTADO
+- **Arquivo: war_game_aventureiro.c** - Sistema avançado de jogo
+- ✅ Combate com múltiplos ataques e defesas
+- ✅ Sistema de progressão e experiência
+- ✅ Inventário expandido com equipamentos
+- ✅ Missões e NPCs interativos
+- ✅ Sistema de loja e economia
 
-// Vetor estático
-Territorio territorios[MAX_TERRITORIOS];
+### 🏆 Nível Mestre ✅ IMPLEMENTADO
+- **Arquivo: war_game_mestre.c** - Versão completa do jogo
+- ✅ Sistema multiplayer (PvP e cooperativo)
+- ✅ 4 classes especializadas: Guerreiro, Mago, Arqueiro, Curandeiro
+- ✅ Dungeons aleatórias com layouts dinâmicos
+- ✅ Chefes únicos com mecânicas complexas
+- ✅ Sistema de guildas e personalização avançada
+- ✅ IA avançada para inimigos
+- ✅ Sistema completo de save/load
 
-// Passagem por referência
-void inicializarMapa(Territorio territorios[], int *numTerritorios);
+## 🚀 Como Executar
 
-Saida esperada:
+### Compilação Individual por Nível:
+```bash
+# Nível Novato
+gcc -o war_game_novato war_game_novato.c
+./war_game_novato
 
-=== NIVEL NOVATO - ESTRUTURA BASICA ===
+# Nível Aventureiro
+gcc -o war_game_aventureiro war_game_aventureiro.c
+./war_game_aventureiro
 
-=== MAPA DO WAR ===
-ID      Nome            Cor             Tropas
-----------------------------------------
-1       Brasil          Neutro          1
-2       Argentina       Neutro          1
-3       Peru            Neutro          1
-4       Venezuela       Neutro          1
-5       China           Neutro          1
-6       India           Neutro          1
-7       Japao           Neutro          1
-8       Russia          Neutro          1
+# Nível Mestre
+gcc -o war_game_mestre war_game_mestre.c
+./war_game_mestre
 
-Digite o ID de um territorio para buscar:
+# Compilação Completa:
+gcc -o war_game *.c
+./war_game
 
 ## 👨‍💻 Autor
 
